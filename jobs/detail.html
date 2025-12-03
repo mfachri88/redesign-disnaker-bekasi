@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Lowongan - Disnaker Kab. Bekasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        accent: { DEFAULT: '#06b6d4', pink: '#e11d48', 'pink-hover': '#be123c' },
+                        neutral: { bg: '#f6faf9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    container: { center: true, padding: '1rem', screens: { sm: '640px', md: '768px', lg: '1024px', xl: '1200px' } }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body class="bg-neutral-bg text-slate-800 font-sans">
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+
+            <!-- Header -->
+            <div class="p-8 border-b border-gray-100">
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div
+                        class="w-20 h-20 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100">
+                        <span class="text-3xl font-bold text-gray-400">S</span>
+                    </div>
+                    <div class="flex-1">
+                        <h1 class="text-2xl md:text-3xl font-bold text-primary mb-2">Engineer Staff</h1>
+                        <p class="text-lg text-gray-600 mb-4">PT. Sumco Indonesia</p>
+
+                        <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-accent"></i>
+                                Cikarang Selatan</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-briefcase text-accent"></i>
+                                Manufaktur</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-accent"></i> Full Time
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-money-bill text-accent"></i>
+                                Kompetitif</div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="https://karirhub.kemnaker.go.id" target="_blank"
+                            class="block w-full text-center bg-accent-pink hover:bg-accent-pink-hover text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-pink-900/20 transition-all transform hover:scale-105">
+                            Lamar Sekarang
+                        </a>
+                        <p class="text-xs text-gray-400 text-center mt-2">via Karirhub Kemnaker</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="p-8 prose max-w-none text-gray-600">
+                <h3 class="text-primary font-bold text-lg mb-4">Deskripsi Pekerjaan</h3>
+                <p class="mb-6">
+                    Kami mencari Engineer Staff yang berdedikasi untuk bergabung dengan tim kami. Kandidat yang ideal
+                    akan memiliki latar belakang yang kuat dalam teknik industri dan kemampuan pemecahan masalah yang
+                    baik.
+                </p>
+
+                <h3 class="text-primary font-bold text-lg mb-4">Tanggung Jawab</h3>
+                <ul class="list-disc pl-5 mb-6 space-y-2">
+                    <li>Mengawasi proses produksi dan memastikan efisiensi.</li>
+                    <li>Melakukan analisis data produksi dan membuat laporan.</li>
+                    <li>Berkolaborasi dengan tim lain untuk meningkatkan kualitas produk.</li>
+                    <li>Memastikan kepatuhan terhadap standar keselamatan kerja.</li>
+                </ul>
+
+                <h3 class="text-primary font-bold text-lg mb-4">Kualifikasi</h3>
+                <ul class="list-disc pl-5 mb-6 space-y-2">
+                    <li>Pendidikan minimal S1 Teknik Industri/Mesin/Elektro.</li>
+                    <li>Pengalaman minimal 1 tahun di bidang manufaktur (Fresh graduate dipersilakan melamar).</li>
+                    <li>Mampu berbahasa Inggris (aktif/pasif).</li>
+                    <li>Bersedia ditempatkan di Cikarang.</li>
+                </ul>
+            </div>
+
+            <!-- Footer -->
+            <div class="p-8 bg-gray-50 border-t border-gray-100">
+                <p class="text-sm text-gray-500 text-center">
+                    Lowongan ini berakhir pada <span class="font-bold text-primary">30 Desember 2024</span>. Segera
+                    kirimkan lamaran Anda sebelum batas waktu.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

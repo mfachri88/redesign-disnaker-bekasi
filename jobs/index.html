@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowongan Kerja - Disnaker Kab. Bekasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        accent: { DEFAULT: '#06b6d4', pink: '#e11d48', 'pink-hover': '#be123c' },
+                        neutral: { bg: '#f6faf9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    container: { center: true, padding: '1rem', screens: { sm: '640px', md: '768px', lg: '1024px', xl: '1200px' } }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body class="bg-neutral-bg text-slate-800 font-sans">
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">SISTEM INFORMASI PASAR KERJA</h1>
+            <p class="text-blue-200 max-w-2xl mx-auto">Temukan peluang karir terbaik di perusahaan-perusahaan ternama di
+                SIPKERJA</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- Enhanced Search/Filter Section -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 mb-10">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-primary flex items-center gap-2">
+                    <i class="fa-solid fa-filter text-accent"></i>
+                    Cari Lowongan Kerja
+                </h2>
+                <p class="text-sm text-gray-500 mt-1">Temukan pekerjaan yang sesuai dengan keahlian Anda</p>
+            </div>
+
+            <form id="filter-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        <i class="fa-solid fa-magnifying-glass text-accent mr-1"></i>
+                        Kata Kunci
+                    </label>
+                    <div class="relative">
+                        <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" id="keyword-input" placeholder="Cari posisi, perusahaan, atau skill..."
+                            class="w-full pl-11 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-accent focus:border-accent transition-all text-gray-700 placeholder-gray-400">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        <i class="fa-solid fa-location-dot text-accent mr-1"></i>
+                        Lokasi
+                    </label>
+                    <div class="relative">
+                        <i
+                            class="fa-solid fa-map-marker-alt absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        <select id="location-select"
+                            class="w-full pl-11 pr-10 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-accent focus:border-accent transition-all text-gray-700 appearance-none bg-white cursor-pointer">
+                            <option value="">Semua Lokasi</option>
+                            <option value="Cikarang Pusat">Cikarang Pusat</option>
+                            <option value="Cikarang Barat">Cikarang Barat</option>
+                            <option value="Cikarang Selatan">Cikarang Selatan</option>
+                            <option value="Cikarang Utara">Cikarang Utara</option>
+                            <option value="Cibitung">Cibitung</option>
+                            <option value="Tambun">Tambun</option>
+                            <option value="Tambun Selatan">Tambun Selatan</option>
+                        </select>
+                        <i
+                            class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-sm"></i>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Results Counter -->
+            <div class="mt-4 pt-4 border-t border-gray-100">
+                <p class="text-sm text-gray-600">
+                    Menampilkan <span id="results-count" class="font-bold text-accent">0</span> lowongan
+                    <span id="filter-status" class="text-gray-400"></span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Job Grid -->
+        <div id="job-list-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Job cards will be dynamically inserted here -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-12">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">
+                <i class="fa-solid fa-search text-2xl text-gray-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Tidak ada lowongan ditemukan</h3>
+            <p class="text-gray-500">Coba ubah kata kunci atau filter lokasi Anda.</p>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-12 flex flex-col items-center gap-6">
+            <nav id="pagination-container" class="flex gap-2">
+                <!-- Pagination buttons will be dynamically inserted here -->
+            </nav>
+
+            <a href="https://karirhub.kemnaker.go.id/" target="_blank"
+                class="inline-flex items-center gap-2 text-accent font-bold hover:text-accent-hover transition-colors">
+                Lihat Lebih Banyak Lowongan <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

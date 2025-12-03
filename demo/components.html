@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Demo - Disnaker Kab. Bekasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        accent: { DEFAULT: '#06b6d4', pink: '#e11d48', 'pink-hover': '#be123c' },
+                        neutral: { bg: '#f6faf9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    container: { center: true, padding: '1rem', screens: { sm: '640px', md: '768px', lg: '1024px', xl: '1200px' } }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body class="bg-neutral-bg text-slate-800 font-sans">
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-8">Component Library</h1>
+
+        <!-- Buttons -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-4">Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-bold">Primary</button>
+                <button
+                    class="bg-accent hover:bg-accent-hover text-white px-6 py-2 rounded-lg font-bold">Accent</button>
+                <button class="bg-accent-pink hover:bg-accent-pink-hover text-white px-6 py-2 rounded-lg font-bold">CTA
+                    Pink</button>
+                <button
+                    class="bg-white border border-gray-200 hover:border-accent hover:text-accent text-gray-700 px-6 py-2 rounded-lg font-bold">Outline</button>
+            </div>
+        </section>
+
+        <!-- Job Card -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-4">Job Card</h2>
+            <div class="max-w-md">
+                <article class="job-card bg-white rounded-xl border border-gray-100 p-6 relative group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex gap-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-gray-50 flex items-center justify-center border border-gray-100">
+                                <span class="text-xl font-bold text-gray-400">D</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg group-hover:text-accent transition-colors">
+                                    Demo Position</h3>
+                                <p class="text-sm text-gray-500">Demo Company Ltd.</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn text-gray-300 hover:text-accent-pink transition-colors"><i
+                                class="fa-regular fa-bookmark text-xl"></i></button>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i
+                                class="fa-solid fa-location-dot text-accent w-4"></i> Location</div>
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i
+                                class="fa-solid fa-clock text-accent w-4"></i> Full Time</div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-50">
+                        <span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">Kuota: 10</span>
+                        <a href="#"
+                            class="text-sm font-bold text-accent-pink hover:text-accent-pink-hover flex items-center gap-1">Lamar
+                            <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Alerts/Badges -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-4">Badges</h2>
+            <div class="flex gap-4">
+                <span class="bg-blue-50 text-accent px-3 py-1 rounded-full text-sm font-semibold">New</span>
+                <span class="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Active</span>
+                <span class="bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Closed</span>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

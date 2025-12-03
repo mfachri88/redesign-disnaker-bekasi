@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi - Disnaker Kab. Bekasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        accent: { DEFAULT: '#06b6d4', pink: '#e11d48' },
+                        neutral: { bg: '#f6faf9' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    container: { center: true, padding: '1rem', screens: { sm: '640px', md: '768px', lg: '1024px', xl: '1200px' } }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body class="bg-neutral-bg text-slate-800 font-sans">
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Struktur Organisasi</h1>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 prose max-w-none">
+                <p class="text-lg text-gray-600 mb-8 text-center">
+                    Struktur Organisasi Dinas Ketenagakerjaan Kabupaten Bekasi berdasarkan Peraturan Bupati Bekasi Nomor
+                    38 Tahun 2016.
+                </p>
+
+                <!-- Responsive Image Viewer -->
+                <div class="relative group cursor-zoom-in overflow-hidden rounded-xl bg-gray-50 border border-gray-200">
+                    <img src="../assets/img/strukturorganisasi.png" alt="Bagan Struktur Organisasi"
+                        class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="bg-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">Klik untuk
+                            memperbesar</span>
+                    </div>
+                </div>
+
+                <div class="mt-12 space-y-6">
+                    <h3 class="text-xl font-bold text-primary">Kepala Dinas</h3>
+                    <p>Memimpin pelaksanaan tugas dan fungsi Dinas Ketenagakerjaan.</p>
+
+                    <h3 class="text-xl font-bold text-primary">Sekretariat</h3>
+                    <p>Membawahi Sub Bagian Perencanaan, Keuangan, dan Umum & Kepegawaian.</p>
+
+                    <h3 class="text-xl font-bold text-primary">Bidang Penempatan & Perluasan Kerja</h3>
+                    <p>Bertanggung jawab atas informasi pasar kerja, penempatan tenaga kerja, dan perluasan kesempatan
+                        kerja.</p>
+
+                    <h3 class="text-xl font-bold text-primary">Bidang Pelatihan & Produktivitas</h3>
+                    <p>Menyelenggarakan pelatihan kerja dan peningkatan produktivitas tenaga kerja.</p>
+
+                    <h3 class="text-xl font-bold text-primary">Bidang Hubungan Industrial</h3>
+                    <p>Menangani syarat kerja, pengupahan, jaminan sosial, dan penyelesaian perselisihan hubungan
+                        industrial.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
