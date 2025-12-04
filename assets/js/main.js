@@ -1,22 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
-
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.setAttribute('aria-hidden', 'false');
-        });
-
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-            });
-        }
-    }
+    // Mobile Menu is now handled by components.js
 
     // Dropdown Logic (Desktop)
     const dropdowns = document.querySelectorAll('.group');

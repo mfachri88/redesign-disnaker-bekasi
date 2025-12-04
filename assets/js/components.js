@@ -94,49 +94,64 @@ function generateNavbarHTML() {
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn"
                 class="lg:hidden text-gray-700 hover:text-primary p-2 focus:outline-none focus:ring-2 focus:ring-accent rounded-lg"
-                aria-label="Open menu">
-                <i class="fa-solid fa-bars text-2xl"></i>
+                aria-label="Toggle menu">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 bg-white hidden" aria-hidden="true">
-        <div class="flex flex-col h-full">
-            <div class="flex justify-between items-center p-4 border-b border-gray-100">
-                <span class="text-primary font-bold text-lg">Menu</span>
-                <button id="mobile-menu-close" class="text-gray-500 hover:text-primary p-2" aria-label="Close menu">
-                    <i class="fa-solid fa-xmark text-2xl"></i>
+    <!-- Mobile Menu - Slide Down -->
+    <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-100 shadow-lg overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;" aria-hidden="true">
+        <div class="container mx-auto px-4 py-4 space-y-2">
+            <a href="${base}index.html" class="block text-base font-medium text-gray-800 hover:text-accent hover:bg-gray-50 py-3 px-3 rounded-lg transition-colors">
+                <i class="fa-solid fa-home w-5 text-gray-400 mr-2"></i> Beranda
+            </a>
+
+            <!-- Mobile Dropdown: Profil -->
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn flex items-center justify-between w-full text-base font-medium text-gray-800 hover:bg-gray-50 py-3 px-3 rounded-lg transition-colors">
+                    <span><i class="fa-solid fa-building w-5 text-gray-400 mr-2"></i> Profil</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
                 </button>
-            </div>
-            <div class="flex-1 overflow-y-auto p-4 space-y-6">
-                <a href="${base}index.html" class="block text-lg font-medium text-gray-800 hover:text-accent">Beranda</a>
-
-                <div class="space-y-3">
-                    <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider">Profil</h3>
-                    <a href="${base}profile/struktur.html" class="block pl-4 text-gray-700 hover:text-accent">Struktur
-                        Organisasi</a>
-                    <a href="${base}profile/tugas-fungsi.html" class="block pl-4 text-gray-700 hover:text-accent">Tugas &
-                        Fungsi</a>
+                <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 ease-in-out pl-6 space-y-1 border-l-2 border-gray-200 ml-5" style="max-height: 0; opacity: 0;">
+                    <a href="${base}profile/struktur.html" class="block py-2 px-3 text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors">
+                        <i class="fa-solid fa-sitemap w-5 text-gray-400"></i> Struktur Organisasi
+                    </a>
+                    <a href="${base}profile/tugas-fungsi.html" class="block py-2 px-3 text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors">
+                        <i class="fa-solid fa-list-check w-5 text-gray-400"></i> Tugas & Fungsi
+                    </a>
                 </div>
-
-                <div class="space-y-3">
-                    <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider">Layanan</h3>
-                    <a href="https://sippn.menpan.go.id/instansi/185834" target="_blank"
-                        class="block pl-4 text-gray-700 hover:text-accent">SIPPN</a>
-                    <a href="https://docs.google.com/" target="_blank"
-                        class="block pl-4 text-gray-700 hover:text-accent">Whistle Blowing</a>
-                    <a href="https://www.lapor.go.id/instansi/dinas-tenaga-kerja-8" target="_blank"
-                        class="block pl-4 text-gray-700 hover:text-accent">Pengaduan</a>
-                </div>
-
-                <a href="${base}jobs/index.html" class="block text-lg font-medium text-gray-800 hover:text-accent">Lowongan
-                    Kerja</a>
             </div>
-            <div class="p-4 border-t border-gray-100">
+
+            <!-- Mobile Dropdown: Layanan -->
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn flex items-center justify-between w-full text-base font-medium text-gray-800 hover:bg-gray-50 py-3 px-3 rounded-lg transition-colors">
+                    <span><i class="fa-solid fa-concierge-bell w-5 text-gray-400 mr-2"></i> Layanan</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 ease-in-out pl-6 space-y-1 border-l-2 border-gray-200 ml-5" style="max-height: 0; opacity: 0;">
+                    <a href="https://sippn.menpan.go.id/instansi/185834" target="_blank" class="block py-2 px-3 text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors">
+                        <i class="fa-solid fa-globe w-5 text-gray-400"></i> SIPPN
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScE3YXQ70ALyR73NW9NjGVk09XPziNv3gknepgOe5rNhS58-Q/viewform?pli=1" target="_blank" class="block py-2 px-3 text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors">
+                        <i class="fa-solid fa-bullhorn w-5 text-gray-400"></i> Whistle Blowing
+                    </a>
+                    <a href="https://www.lapor.go.id/instansi/dinas-tenaga-kerja-8" target="_blank" class="block py-2 px-3 text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors">
+                        <i class="fa-solid fa-envelope-open-text w-5 text-gray-400"></i> Pengaduan (SP4N)
+                    </a>
+                </div>
+            </div>
+
+            <a href="${base}jobs/index.html" class="block text-base font-medium text-gray-800 hover:text-accent hover:bg-gray-50 py-3 px-3 rounded-lg transition-colors">
+                <i class="fa-solid fa-briefcase w-5 text-gray-400 mr-2"></i> Sipkerja
+            </a>
+
+            <!-- CTA Button -->
+            <div class="pt-3 mt-2 border-t border-gray-100">
                 <a href="https://karirhub.kemnaker.go.id" target="_blank"
-                    class="block w-full text-center bg-accent-pink text-white py-3 rounded-xl font-bold shadow-md">
-                    Lamar Sekarang
+                    class="flex items-center justify-center gap-2 w-full bg-accent-pink hover:bg-accent-pink-hover text-white py-3 rounded-xl font-bold shadow-md transition-colors">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Lamar Sekarang</span>
                 </a>
             </div>
         </div>
@@ -155,7 +170,7 @@ function generateFooterHTML() {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <!-- About -->
             <div>
-                <img src="${base}assets/img/logokujang.png" class="w-40"alt="Logo Kujang">
+                <img src="${base}assets/img/logokujang.png" class="w-20"alt="Logo Kujang">
                 <p class="text-gray-600 leading-relaxed text-sm">
                     Mewujudkan tenaga kerja yang kompeten, produktif, dan berdaya saing untuk mendukung pertumbuhan
                     industri di Kabupaten Bekasi.
@@ -221,6 +236,7 @@ function loadComponents() {
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     if (navbarPlaceholder) {
         navbarPlaceholder.innerHTML = generateNavbarHTML();
+        initMobileMenu();
     }
 
     // Load Footer
@@ -229,6 +245,97 @@ function loadComponents() {
         footerPlaceholder.innerHTML = generateFooterHTML();
     }
 }
+
+// Function to initialize mobile menu and dropdowns
+function initMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+    let isMenuOpen = false;
+
+    if (mobileMenuBtn && mobileMenu && mobileMenuIcon) {
+        // Toggle mobile menu with animation
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (!isMenuOpen) {
+                // Open menu with slide down animation
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+                mobileMenuIcon.style.transform = 'rotate(180deg)';
+                isMenuOpen = true;
+            } else {
+                // Close menu with slide up animation
+                mobileMenu.style.maxHeight = '0';
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuIcon.style.transform = 'rotate(0deg)';
+                isMenuOpen = false;
+                
+                // Also close all dropdowns when menu closes
+                const allDropdownContents = document.querySelectorAll('.mobile-dropdown-content');
+                const allDropdownIcons = document.querySelectorAll('.mobile-dropdown-btn i.fa-chevron-down');
+                allDropdownContents.forEach(function(content) {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                    content.style.marginTop = '0';
+                });
+                allDropdownIcons.forEach(function(icon) {
+                    icon.style.transform = 'rotate(0deg)';
+                });
+            }
+        });
+    }
+
+    // Initialize mobile dropdowns with animation
+    const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+    dropdownBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const dropdown = btn.closest('.mobile-dropdown');
+            const content = dropdown.querySelector('.mobile-dropdown-content');
+            const icon = btn.querySelector('i.fa-chevron-down');
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            if (!isOpen) {
+                // Open dropdown with animation
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.opacity = '1';
+                content.style.marginTop = '4px';
+                if (icon) icon.style.transform = 'rotate(180deg)';
+                
+                // Update parent menu height
+                if (mobileMenu) {
+                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + content.scrollHeight + 'px';
+                }
+            } else {
+                // Close dropdown with animation
+                content.style.maxHeight = '0';
+                content.style.opacity = '0';
+                content.style.marginTop = '0';
+                if (icon) icon.style.transform = 'rotate(0deg)';
+                
+                // Update parent menu height
+                if (mobileMenu) {
+                    setTimeout(function() {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    }, 300);
+                }
+            }
+        });
+    });
+}
+
+// Add transition style for hamburger icon
+const style = document.createElement('style');
+style.textContent = `
+    #mobile-menu-icon {
+        transition: transform 0.3s ease;
+    }
+`;
+document.head.appendChild(style);
 
 // Load components when DOM is ready
 if (document.readyState === 'loading') {
